@@ -168,9 +168,9 @@ def process_file(user_id, new_filename):
     dist = calculate_dist(enc_v1_proto, enc_reg_proto, user_id)
 
     # 결과를 저장
-    original_filename = new_filename.split('_', 1)[-1]  # Remove the user_id prefix from the original filename
+    original_filename = new_filename.split('_', 1)[-1]
     result_filename = f"{user_id}_protocol_app_" + original_filename
-    # result_filename = "protocol_app_" + os.path.basename(new_file_path)
+   
     result_path = os.path.join('processed/protocol_app', result_filename)
     with open(result_path, 'wb') as f:
         f.write(base64.b64encode(dist).decode().encode())
