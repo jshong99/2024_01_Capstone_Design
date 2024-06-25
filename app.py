@@ -1,16 +1,3 @@
-# 추가 구현 필요한 부분
-# 1. 클라이언트로부터 public key 받아와서 ID와 함께 저장하는 부분 (V)
-# 2. 서버가 반환한 참/거짓과 인덱스 받아서 인덱스가 맞는지 확인 후 최종 참/거짓 리턴하는 부분 (V)
-# 3. dist 저장시 user_id 앞에 붙이기 (V)
-# 4. 처리가 제대로 되지 않았는데 processed에 저장되는 경우 확인
-# 5. API 명세서 작성 (V)
-# 6. 로그인 기능
-# 7. 동일 ID에 대해 Upload할 때 기존 파일이 있을 경우 처리 방법 -> DELETE 기능 추가 (V)
-# 8. 하나의 퍼블릭 키만 가지고 계속 사용할 가능성 -> DELETE에 키 빼고 모두 삭제, 키와 Reg 빼고 모두 삭제 기능 추가
-
-# 여러 데이터셋 대상으로 테스트하여 정확도 기록
-
-
 from flask import Flask, request, jsonify, send_file
 from flask_cors import CORS
 import tenseal as ts
